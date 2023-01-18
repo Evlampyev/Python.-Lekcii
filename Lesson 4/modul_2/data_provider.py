@@ -1,4 +1,5 @@
 ﻿from random import randint
+import user_interface as ui
 
 
 def get_temperature(sensor):
@@ -20,4 +21,4 @@ def get_wind_speed(sensor):
 
 
 def data_collection(sensor=1):
-    return (get_temperature(sensor), get_pressure(sensor), get_wind_speed(sensor))
+    return (ui.temperature_view(sensor), ui.pressure_view(sensor), ui.wind_speed_view(sensor))
